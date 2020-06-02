@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Page Font Style",
+  "description": "A more advanced hello world extension",
+  "icons": {
+    "128": "src/assets/icon128.png",
+    "48": "src/assets/icon64.png",
+    "16": "src/assets/icon16.png"
+  },
+  "page_action": {
+    "default_icon": "./src/assets/icon16.png",
+    "default_popup": "src/html/popup.html",
+    "default_title": "PageFontStyle"
+  },
+  "background": {
+    "page": "src/html/background.html",
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://developer.chrome.com/*"],
+      "js": ["src/content.js"],
+      "css": ["src/styles/content.css"]
+    }
+  ],
+  "permissions": ["https://developer.chrome.com/*", "tabs"]
+}

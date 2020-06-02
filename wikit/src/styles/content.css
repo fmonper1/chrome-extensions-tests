@@ -1,0 +1,7 @@
+.article-content h1,
+.article-content h2 {
+  color: red;
+}
+.customHeading {
+  text-decoration: underline;
+}
